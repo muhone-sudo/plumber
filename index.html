@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tesisat Çözümleri | İstanbul</title>
+    <meta name="description" content="İstanbul'un yeni nesil su tesisatçısı. Kameralı kaçak tespiti, robotla tıkanıklık açma ve 7/24 premium servis. Teknolojik çözümlerle tanışın.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- TailwindCSS & Custom CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- GSAP (GreenSock Animation Platform) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Smooth Scroll (Lenis) - KALDIRILDI -->
+    <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script> -->
+
+    <script>
+      // Tailwind Config
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'light-bg': '#F8FAFC',
+              'primary': '#2563EB',
+              'accent': '#0EA5E9',
+              'warning': '#F97316',
+              'dark-text': '#0F172A',
+              'medium-text': '#334155',
+              'light-text': '#64748B',
+            },
+            borderRadius: {
+                '4xl': '2rem',
+                '5xl': '2.5rem',
+            },
+            boxShadow: {
+              'floating': '0 20px 40px -10px rgba(37, 99, 235, 0.1)',
+              'floating-lg': '0 35px 70px -15px rgba(37, 99, 235, 0.15)',
+              'glow-primary': '0 0 20px rgba(37, 99, 235, 0.5)',
+              'glow-accent': '0 0 20px rgba(14, 165, 233, 0.6)',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-light-bg font-sans text-medium-text antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between bg-white/50 backdrop-blur-xl rounded-full px-6 py-3 border border-white/20 shadow-md">
+                <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-dark-text hover:text-primary transition-colors group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-500 group-hover:text-primary transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-[-10deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span>Tesisat<span class="text-primary">Tech</span></span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#hizmetler" class="text-slate-600 hover:text-primary transition-colors">Hizmetler</a>
+                    <a href="hakkimizda.html" class="text-slate-600 hover:text-primary transition-colors">Hakkımızda</a>
+                    <a href="iletisim.html" class="text-slate-600 hover:text-primary transition-colors">İletişim</a>
+                </nav>
+                <a href="tel:05555555555" class="hidden md:inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                    Hızlı Teklif Al
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center py-32 overflow-hidden">
+            <!-- Background Glows -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-50">
+                <div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-cyan-300/30 rounded-full blur-3xl background-glow"></div>
+                <div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-blue-300/40 rounded-full blur-3xl background-glow"></div>
+            </div>
+
+            <div class="container mx-auto px-6 z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <!-- Left: Text Content -->
+                    <div class="text-center lg:text-left">
+                        <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl font-extrabold text-dark-text leading-tight tracking-tighter">
+                            İstanbul’un En <span class="text-primary">Modern</span> Su Tesisat Hizmeti
+                        </h1>
+                        <p class="hero-subtitle mt-6 text-lg md:text-xl text-light-text max-w-xl mx-auto lg:mx-0">
+                            Kameralı kaçağı tespit · Robotla tıkanıklık açma · 7/24 Premium Servis
+                        </p>
+                        <div class="hero-cta mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <button class="w-full sm:w-auto bg-primary text-white font-semibold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-glow-primary transition-all duration-300 transform hover:scale-[1.03]">
+                                Hemen Ara: 0555 555 55 55
+                            </button>
+                            <button class="w-full sm:w-auto glass-button text-dark-text font-semibold px-8 py-4 rounded-full text-lg shadow-lg">
+                                WhatsApp Destek
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Right: Visual -->
+                    <div class="relative hero-image flex justify-center items-center">
+                        <div class="absolute w-full h-full bg-blue-500/10 rounded-6xl transform -rotate-6 pulse-ambient-light"></div>
+                        <img data-src="https://images.unsplash.com/photo-1581109743958-752a512b9a99?q=80&w=800&auto=format&fit=crop" 
+                             src="https://images.unsplash.com/photo-1581109743958-752a512b9a99?q=1&w=10&auto=format&fit=crop"
+                             alt="Modern su tesisatı ekipmanları" 
+                             class="lazy rounded-4xl w-full max-w-md lg:max-w-none shadow-floating-lg z-10 object-cover aspect-[4/3]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="hizmetler" class="py-32 section-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl md:text-5xl font-bold text-dark-text">Teknolojik Çözümlerimiz</h2>
+                    <p class="mt-4 text-lg text-light-text max-w-2xl mx-auto">Geleceğin tesisat teknolojilerini bugünden evinize getiriyoruz.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="stagger-card glass-card p-8 rounded-4xl shadow-floating transform transition-all duration-300 hover:-translate-y-2 hover:shadow-floating-lg">
+                        <div class="bg-blue-100 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 10l.01.01" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-text mb-3">Kameralı Kaçak Tespiti</h3>
+                        <p class="text-light-text">Termal ve akustik cihazlarla kırmadan, dökmeden su kaçağını noktasal olarak buluyoruz.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="stagger-card glass-card p-8 rounded-4xl shadow-floating transform transition-all duration-300 hover:-translate-y-2 hover:shadow-floating-lg">
+                        <div class="bg-cyan-100 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-text mb-3">Robotla Tıkanıklık Açma</h3>
+                        <p class="text-light-text">Giderlerinizi modern robot teknolojisiyle, pimaşlarınıza zarar vermeden açıyoruz.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="stagger-card glass-card p-8 rounded-4xl shadow-floating transform transition-all duration-300 hover:-translate-y-2 hover:shadow-floating-lg">
+                        <div class="bg-orange-100 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.657 7.343A8 8 0 0117.657 18.657z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9.556 16.843A5.5 5.5 0 016.343 12m6.344 0a5.5 5.5 0 01-3.182 4.843" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark-text mb-3">Petek ve Tesisat Temizliği</h3>
+                        <p class="text-light-text">Özel kimyasallar ve makinelerle ısıtma sisteminizin verimini artırıyor, yakıttan tasarruf sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="py-32 bg-slate-100 section-reveal">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="section-title text-4xl md:text-5xl font-bold text-dark-text">Neden Tesisat<span class="text-primary">Tech</span>?</h2>
+                        <p class="mt-6 text-lg text-light-text">Sıradan bir servis değil, eviniz için teknolojik bir partner sunuyoruz. Mükemmellik standartımızdır.</p>
+                        <div class="mt-12 space-y-8">
+                            <!-- Feature 1 -->
+                            <div class="stagger-card flex items-start gap-5 group">
+                                <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-glow-primary transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-dark-text">7/24 Acil Servis</h3>
+                                    <p class="text-light-text mt-1">Günün her saati, bir telefon uzağınızdayız. Acil durumlar için anında çözüm.</p>
+                                </div>
+                            </div>
+                            <!-- Feature 2 -->
+                            <div class="stagger-card flex items-start gap-5 group">
+                                <div class="flex-shrink-0 w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-md group-hover:shadow-glow-primary transition-all duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-dark-text">Garantili İşçilik</h3>
+                                    <p class="text-light-text mt-1">Yaptığımız her işin arkasındayız. Tüm onarımlarımız 1 yıl garantilidir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stagger-card relative flex justify-center items-center mt-12 lg:mt-0">
+                        <div class="absolute w-full h-full bg-cyan-500/10 rounded-6xl transform rotate-6"></div>
+                        <img data-src="https://images.unsplash.com/photo-1542621334-a254cf47763b?q=80&w=800&auto=format&fit=crop"
+                             src="https://images.unsplash.com/photo-1542621334-a254cf47763b?q=1&w=10&auto=format&fit=crop"
+                             alt="Güler yüzlü müşteri hizmetleri"
+                             class="lazy rounded-4xl w-full shadow-floating-lg z-10 object-cover aspect-square">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-32 section-reveal">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl md:text-5xl font-bold text-dark-text">Müşterilerimiz Ne Diyor?</h2>
+                    <p class="mt-4 text-lg text-light-text max-w-2xl mx-auto">Memnuniyetiniz, en büyük referansımız.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="stagger-card glass-card p-8 rounded-4xl shadow-floating">
+                        <p class="text-medium-text mb-6">"İnanılmaz profesyonel bir ekip. Su kaçağını 15 dakikada, tek bir fayansı bile kırmadan buldular. Kesinlikle tavsiye ederim."</p>
+                        <div class="flex items-center">
+                            <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white shadow-md" data-src="https://randomuser.me/api/portraits/men/32.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Ahmet Yılmaz">
+                            <div>
+                                <p class="font-bold text-dark-text">Ahmet Yılmaz</p>
+                                <p class="text-sm text-light-text">Kadıköy, İstanbul</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="stagger-card glass-card p-8 rounded-4xl shadow-floating">
+                        <p class="text-medium-text mb-6">"Web sitelerinden ulaştım ve gördüğüm kalite hizmete de yansımış. Gelen usta çok bilgili ve temiz çalıştı. Teşekkürler TesisatTech."</p>
+                        <div class="flex items-center">
+                            <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white shadow-md" data-src="https://randomuser.me/api/portraits/women/44.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Ayşe Demir">
+                            <div>
+                                <p class="font-bold text-dark-text">Ayşe Demir</p>
+                                <p class="text-sm text-light-text">Beşiktaş, İstanbul</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial Card 3 -->
+                    <div class="stagger-card glass-card p-8 rounded-4xl shadow-floating">
+                        <p class="text-medium-text mb-6">"Tıkanan mutfak giderim için çağırdım. Robotlu sistemle 20 dakikada sorunu çözdüler. Fiyatları da hizmete göre çok makul."</p>
+                        <div class="flex items-center">
+                            <img class="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white shadow-md" data-src="https://randomuser.me/api/portraits/men/56.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Mehmet Kaya">
+                            <div>
+                                <p class="font-bold text-dark-text">Mehmet Kaya</p>
+                                <p class="text-sm text-light-text">Üsküdar, İstanbul</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100/70 pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-dark-text">Tesisat<span class="text-primary">Tech</span></h3>
+                    <p class="mt-4 text-light-text max-w-sm">İstanbul'un her noktasına yeni nesil tesisat çözümleri sunuyoruz.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-dark-text text-lg">Hızlı Menü</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="index.html#hizmetler" class="text-light-text hover:text-primary">Hizmetler</a></li>
+                        <li><a href="hakkimizda.html" class="text-light-text hover:text-primary">Hakkımızda</a></li>
+                        <li><a href="iletisim.html" class="text-light-text hover:text-primary">İletişim</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-dark-text text-lg">Bize Ulaşın</h4>
+                    <ul class="mt-4 space-y-2 text-light-text">
+                        <li>info@tesisattech.com</li>
+                        <li>0555 555 55 55</li>
+                        <li>İstanbul, Türkiye</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-slate-200 pt-8 text-center text-light-text text-sm">
+                <p>&copy; 2025 TesisatTech. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Floating Sticky Bar -->
+    <div class="floating-sticky-bar fixed bottom-5 left-1/2 -translate-x-1/2 z-40">
+        <div class="glass-card rounded-full px-6 py-3 flex items-center gap-4 shadow-floating-lg">
+            <p class="hidden sm:block text-dark-text font-medium">Acil bir durum mu var?</p>
+            <a href="tel:05555555555" class="bg-primary text-white font-semibold px-6 py-3 rounded-full text-base shadow-lg hover:shadow-glow-primary transition-all duration-300 transform hover:scale-[1.03]">
+                7/24 Bizi Arayın
+            </a>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
